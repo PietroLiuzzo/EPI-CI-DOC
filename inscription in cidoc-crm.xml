@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" 
+    xml:lang="de">
+
+    <crm:E22_Man-Made_Object rdf:about="http://arachne.uni-koeln.de/entity/1085617">
+        <crm:P2_has_type rdf:resource="http://arachne.uni-koeln.de/vocab/kategorien/objekt"/>
+        <crm:P2_has_type>
+            <crm:E55_Type>
+                <!-- Datenfeld: GattungAllgemein -->
+                <rdf:value>Inschrift</rdf:value>
+            </crm:E55_Type>
+        </crm:P2_has_type>
+        <crm:P2_has_type>
+            <crm:E55_Type>
+                <!-- Datenfeld: zuMonument -->
+                <rdf:value>nein</rdf:value>
+            </crm:E55_Type>
+        </crm:P2_has_type>
+        <crm:P16i_was_used_for>
+            <crm:E7_Activity>
+                <crm:P7_took_place_at>
+                    <crm:E53_Place>
+                        <crm:P89_falls_within>
+                            <crm:E53_Place>
+                                <!-- Datenfeld: Fundort -->
+                                <crm:P3_has_note rdf:datatype="xs:string">Rom, Via del
+                                    Macao</crm:P3_has_note>
+                                <crm:P89_falls_within>
+                                    <crm:E53_Place>
+                                        <crm:P89_falls_within>
+                                            <crm:E53_Place>
+                                                <crm:P87_is_identified_by>
+                                                    <crm:E48_Place_Name>
+                                                        <!-- Datenfeld: Fundstaat -->
+                                                        <rdf:value>Italien</rdf:value>
+                                                    </crm:E48_Place_Name>
+                                                </crm:P87_is_identified_by>
+                                            </crm:E53_Place>
+                                        </crm:P89_falls_within>
+                                    </crm:E53_Place>
+                                </crm:P89_falls_within>
+                            </crm:E53_Place>
+                        </crm:P89_falls_within>
+                    </crm:E53_Place>
+                </crm:P7_took_place_at>
+            </crm:E7_Activity>
+        </crm:P16i_was_used_for>
+        <crm:P31i_was_modified_by>
+            <crm:E11_Modification>
+                <!-- Datenfeld: Bearbeitungen -->
+                <rdf:value>nicht ergänzt</rdf:value>
+            </crm:E11_Modification>
+        </crm:P31i_was_modified_by>
+        <crm:P31i_was_modified_by>
+            <crm:E11_Modification>
+                <!-- Datenfeld: Technik -->
+                <crm:P3_has_note rdf:datatype="xs:string">Bildhauerei</crm:P3_has_note>
+            </crm:E11_Modification>
+        </crm:P31i_was_modified_by>
+        <crm:P39i_was_measured_by>
+            <crm:E16_Measurement>
+                <crm:P40_observed_dimension>
+                    <crm:E54_Dimension>
+                        <crm:P2_has_type>
+                            <crm:E55_Type>
+                                <!-- fester Wert -->
+                                <rdf:value>Breite</rdf:value>
+                            </crm:E55_Type>
+                        </crm:P2_has_type>
+                        <!-- Datenfeld: BreiteGesamt -->
+                        <crm:P90_has_value rdf:datatype="xs:string">89</crm:P90_has_value>
+                    </crm:E54_Dimension>
+                </crm:P40_observed_dimension>
+                <crm:P40_observed_dimension>
+                    <crm:E54_Dimension>
+                        <crm:P2_has_type>
+                            <crm:E55_Type>
+                                <!-- fester Wert -->
+                                <rdf:value>Höhe</rdf:value>
+                            </crm:E55_Type>
+                        </crm:P2_has_type>
+                        <!-- Datenfeld: HoeheGesamt -->
+                        <crm:P90_has_value rdf:datatype="xs:string">101,5</crm:P90_has_value>
+                    </crm:E54_Dimension>
+                </crm:P40_observed_dimension>
+                <crm:P40_observed_dimension>
+                    <crm:E54_Dimension>
+                        <crm:P2_has_type>
+                            <crm:E55_Type>
+                                <!-- fester Wert -->
+                                <rdf:value>Tiefe</rdf:value>
+                            </crm:E55_Type>
+                        </crm:P2_has_type>
+                        <!-- Datenfeld: TiefeGesamt -->
+                        <crm:P90_has_value rdf:datatype="xs:string">89</crm:P90_has_value>
+                    </crm:E54_Dimension>
+                </crm:P40_observed_dimension>
+            </crm:E16_Measurement>
+        </crm:P39i_was_measured_by>
+        <crm:P44_has_condition>
+            <crm:E3_Condition_State>
+                <crm:P2_has_type>
+                    <crm:E55_Type>
+                        <!-- Datenfeld: Erhaltung -->
+                        <rdf:value>Fragment(e)</rdf:value>
+                    </crm:E55_Type>
+                </crm:P2_has_type>
+                <!-- Datenfeld: Erhaltungszustand -->
+                <crm:P3_has_note rdf:datatype="xs:string">Der Körper des Altars ist unten durch eine
+                    primitive Hohlkehle und oben durch einen horizontalen Wulst von den rechteckigen
+                    Teilen abgesetzt, die Oberfläche und Teile die Inschrift sind
+                    beschädigt</crm:P3_has_note>
+            </crm:E3_Condition_State>
+        </crm:P44_has_condition>
+        <crm:P45_consists_of>
+            <crm:E57_Material>
+                <!-- Datenfeld: Material -->
+                <rdf:value>anderes Gestein</rdf:value>
+                <!-- Datenfeld: MaterialBemerkung -->
+                <crm:P3_has_note rdf:datatype="xs:string">Material speziell: Peperin</crm:P3_has_note>
+            </crm:E57_Material>
+        </crm:P45_consists_of>
+        <crm:P70i_is_documented_in>
+            <crm:E31_Document rdf:about="http://arachne.uni-koeln.de/db/1085617">
+                <crm:P105_right_held_by>
+                    <crm:E74_Group>
+                        <!-- Datenfeld: DatensatzGruppeObjekt -->
+                        <rdf:value>Arachne</rdf:value>
+                    </crm:E74_Group>
+                </crm:P105_right_held_by>
+            </crm:E31_Document>
+        </crm:P70i_is_documented_in>
+        <crm:P101_had_as_general_use>
+            <crm:E55_Type>
+                <!-- Datenfeld: Funktion -->
+                <rdf:value>Weihung</rdf:value>
+            </crm:E55_Type>
+        </crm:P101_had_as_general_use>
+        <crm:P102_has_title>
+            <crm:E35_Title rdf:about="http://arachne.uni-koeln.de/entity/1085617/title">
+                <!-- Datenfeld: KurzbeschreibungObjekt -->
+                <rdf:value>Altar etruskischer Form</rdf:value>
+            </crm:E35_Title>
+        </crm:P102_has_title>
+        <crm:P108i_was_produced_by>
+            <crm:E12_Production>
+                <crm:P10_falls_within>
+                    <crm:E4_Period>
+                        <!-- Datenfeld: Kulturkreis -->
+                        <rdf:value>römisch</rdf:value>
+                    </crm:E4_Period>
+                </crm:P10_falls_within>
+                <crm:P15_was_influenced_by>
+                    <crm:E39_Actor>
+                        <!-- Datenfeld: Adressat -->
+                        <rdf:value>Verminus</rdf:value>
+                    </crm:E39_Actor>
+                </crm:P15_was_influenced_by>
+                <crm:P17_was_motivated_by>
+                    <crm:E39_Actor>
+                        <!-- Datenfeld: Auftraggeber -->
+                        <rdf:value>Postumius Albinus, A.</rdf:value>
+                    </crm:E39_Actor>
+                </crm:P17_was_motivated_by>
+                <!-- Kategorie datierung -->
+                <crm:P8i_witnessed rdf:resource="http://arachne.uni-koeln.de/item/datierung/19993"/>
+                <!-- Kategorie datierung -->
+                <crm:P8i_witnessed rdf:resource="http://arachne.uni-koeln.de/item/datierung/98924"/>
+            </crm:E12_Production>
+        </crm:P108i_was_produced_by>
+        <crm:P128_carries>
+            <crm:E34_Inscription>
+                <!-- Datenfeld: InschriftObjekt -->
+                <rdf:value>VERMINO / A(ulus) POSTVMIVS A(uli) N(epos) ALBI(nus) / DUO(m) VIR LEGE
+                    PLAETORIA</rdf:value>
+                <!-- Datenfeld: InschriftLatein_OLD -->
+                <rdf:value>VERMINO A(ulus) POSTVMIVS A(uli) N(epos) ALBI(nus) DUO(m) VIR LEGE PLAETORIA </rdf:value>
+                <crm:P70i_is_documented_in>
+                    <crm:E31_Document>
+                        <!-- Datenfeld: InschriftCorpusObjekt -->
+                        <rdf:value>CIL I 804</rdf:value>
+                    </crm:E31_Document>
+                </crm:P70i_is_documented_in>
+                <crm:P72_has_language>
+                    <crm:E56_Language>
+                        <!-- Datenfeld: InschriftSpracheObjekt -->
+                        <rdf:value>lateinisch</rdf:value>
+                    </crm:E56_Language>
+                </crm:P72_has_language>
+            </crm:E34_Inscription>
+        </crm:P128_carries>
+        <!-- Kategorie topographie -->
+        <crm:P53_has_former_or_current_location rdf:resource="http://arachne.uni-koeln.de/entity/822"/>
+        <!-- Kategorie sammlungen -->
+        <crm:P46i_forms_part_of rdf:resource="http://arachne.uni-koeln.de/entity/1241138"/>
+        <!-- Kategorie ort -->
+        <crm:P53i_is_former_or_current_location_of
+            rdf:resource="http://arachne.uni-koeln.de/entity/1206131"/>
+        <!-- Kategorie literatur -->
+        <crm:P67i_is_referred_to_by rdf:resource="http://arachne.uni-koeln.de/entity/23971"/>
+        <!-- Kategorie literatur -->
+        <crm:P67i_is_referred_to_by rdf:resource="http://arachne.uni-koeln.de/entity/24601"/>
+        <!-- Kategorie literatur -->
+        <crm:P67i_is_referred_to_by rdf:resource="http://arachne.uni-koeln.de/entity/24405"/>
+        <!-- Kategorie marbilder -->
+        <crm:P62i_is_depicted_by rdf:resource="http://arachne.uni-koeln.de/entity/141223"/>
+        <!-- Kategorie marbilder -->
+        <crm:P62i_is_depicted_by rdf:resource="http://arachne.uni-koeln.de/entity/141224"/>
+        <!-- Kategorie marbilder -->
+        <crm:P62i_is_depicted_by rdf:resource="http://arachne.uni-koeln.de/entity/437410"/>
+        <!-- Kategorie marbilder -->
+        <crm:P62i_is_depicted_by rdf:resource="http://arachne.uni-koeln.de/entity/921951"/>
+        <!-- Kategorie inschrift -->
+        <crm:P128_carries rdf:resource="http://arachne.uni-koeln.de/entity/2415035"/>
+    </crm:E22_Man-Made_Object>
+    
+
+</rdf:RDF>
