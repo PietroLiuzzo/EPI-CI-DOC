@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:lawd="http://lawd.info/ontology/"
+    xml:lang="en">
+
+    <!-- the abstract photo 
+         (as opposed to its representations on a negative or in a JPG file;
+         the Fotothek doesn't seem to make any statements about the representations)
+         PML: ok
+    -->
+    <crm:E38_Image rdf:about="http://edh-www.adw.uni-heidelberg.de/edh/foto/F000001">
+        <crm:P48_has_preferred_identifier>
+            <crm:E42_Identifier>
+                <rdf:value>F000001</rdf:value>
+                <crm:P71i_is_listed_in rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/foto"
+                />
+            </crm:E42_Identifier>
+        </crm:P48_has_preferred_identifier>
+        <crm:P70i_is_documented_in>
+            <crm:E31_Document rdf:about="http://edh-www.adw.uni-heidelberg.de/edh/foto/F000001.html">
+                <crm:P106i_forms_part_of
+                    rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/foto"/>
+                <!-- (the individual page inherits the language info from the whole document) -->
+            </crm:E31_Document>
+        </crm:P70i_is_documented_in>
+        <crm:P94i_was_created_by>
+            <crm:E65_Creation>
+                <crm:P4_has_time-span>
+                    <crm:E52_Time-Span>
+                        <crm:P86_falls_within>
+                            <crm:E52_Time-Span>
+                                <crm:P78_is_identified_by>
+                                    <crm:E50_Date>
+                                        <rdf:value>1988</rdf:value>
+                                    </crm:E50_Date>
+                                </crm:P78_is_identified_by>
+                            </crm:E52_Time-Span>
+                        </crm:P86_falls_within>
+                    </crm:E52_Time-Span>
+                </crm:P4_has_time-span>
+                <crm:P14_carried_out_by
+                    rdf:resource="http://edh-www.adw.uni-heidelberg.de/hilfe/liste/fotographen/G.A._DF"/>
+                <!-- what does the DF stand for? Does it refer to the person or to the specific photo? 
+                PML: yes, it refers to the photo and I think it does mainly says that while the author is below.
+                DF = Slide
+                Neg. = Negative number
+                Dig. = Digital photograph
+                We do not have such page: I guess it does not make any difference for the uri, i'm I wrong?
+                we should just always use the same?
+                -->
+            </crm:E65_Creation>
+        </crm:P94i_was_created_by>
+        <crm:P104_is_subject_to>
+            <crm:E30_Right>
+                <crm:P2_has_type rdf:resource="http://www.europeana.eu/rights/rr-f/"/>
+                <rdf:label>Rights Reserved - Free Access on Epigraphic Database
+                    Heidelberg</rdf:label>
+                <crm:P75i_is_possessed_by
+                    rdf:resource="http://edh-www.adw.uni-heidelberg.de/hilfe/liste/fotographen/G.A._DF"/>
+                <!--            PML    see above: this might belong to something different?-->
+            </crm:E30_Right>
+        </crm:P104_is_subject_to> http://edh-www.adw.uni-heidelberg.de/fotos/F000001.JPG <!-- link to the depicted object 
+        PML: added-->
+        <crm:P138_represents
+            rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/inschrift/HD000456/objekt"/>
+    </crm:E38_Image>
+
+
+    <!-- the inscription
+         (this is needed only once per inscription, even if it is depicted on more than one photo)
+         
+         PML: I do not understand this. we are going to export this data, so I guess this will be repeated as many times as it occours.
+         is this a problem? 
+    -->
+    <crm:E34_Inscription rdf:about="http://edh-www.adw.uni-heidelberg.de/edh/inschrift/HD000456">
+
+        <!-- Creation event of the inscription text 
+            
+        PML: this is an information we do not keep here.
+        -->
+        <crm:P94i_was_created_by>
+            <crm:E65_Creation>
+                <!-- the Fotothek doesn't seem to make any statements about this 
+             
+                -->
+            </crm:E65_Creation>
+        </crm:P94i_was_created_by>
+
+        <!-- (information about the text of the inscription should go here) 
+        PML: the text of the inscription is in the inscription card, we do not aim at merging record so 
+        these files won't have text of the inscription
+        -->
+
+        <!-- connection to the object 
+        
+        PML: this is rather obscure
+        -->
+        <crm:P128i_is_carried_by
+            rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/inschrift/HD000456/objekt"/>
+
+    </crm:E34_Inscription>
+
+
+    <!-- the object that bears the inscription
+         (this is needed only once per object, even if it is depicted on more than one photo)
+         (an object can bear more than one inscription)
+
+         (it seems that the Epigraphic Database Heidelberg hasn't assigned a separate URI to
+         the object, so I just made one up, derived from the inscription URI, which is
+         probabably not a good idea)
+         
+         PML: no, we do not have a separate uri for "objects" although I am not sure what you mean.
+         to make this distinction would require work to understand where object and text arent in a 1:1 relation
+         and I do not thik we are going to do this. Can this just be omitted?
+         
+         
+    -->
+    <crm:E22_Man-Made_Object
+        rdf:about="http://edh-www.adw.uni-heidelberg.de/edh/inschrift/HD000456/objekt">
+
+        <!-- 1. Production event of the object 
+             (may not exist if the object was not man-made before the inscription was added) 
+       
+        -->
+        <crm:P108i_was_produced_by>
+            <crm:E12_Production>
+                <!-- the Fotothek doesn't seem to make any statements about this -->
+            </crm:E12_Production>
+        </crm:P108i_was_produced_by>
+
+        <!-- 2. Modification event: adding the inscription to the object -->
+        <crm:P31i_was_modified_by>
+            <crm:E11_Modification>
+                <!-- the Fotothek doesn't seem to make any statements about this -->
+            </crm:E11_Modification>
+        </crm:P31i_was_modified_by>
+
+        <!-- 3. Find event -->
+        <lawd:foundAt>
+            <crm:E53_Place>
+                <crm:P89_falls_within
+                    rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/place/1"/>
+                <crm:P89_falls_within
+                    rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/place/3"/>
+                <!-- unless place/1 and place/3 are unified; see below 
+                here we can use trismegistos ids: is that fine?
+                -->
+            </crm:E53_Place>
+        </lawd:foundAt>
+
+        <!-- 3. present location / keeper -->
+        <crm:P50_has_current_location
+            rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/museum/1"/>
+        <!-- What about objects that remain at their findspot, ie. where there is no Actor that acts as keeper?
+             I would prefer: P55 has current location http://edh-www.adw.uni-heidelberg.de/edh/place/5
+             The Word "Aufbewahrung" also seems to hint in this direction. 
+        PML: ok!
+        -->
+
+        <!-- connection to the inscription -->
+        <crm:P128_carries
+            rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/inschrift/HD000456/objekt"/>
+
+        <!-- connection to photo 1 -->
+        <crm:P138i_has_representation
+            rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/foto/F000001"/>
+        <!-- connection to photo 2 -->
+        <crm:P138i_has_representation
+            rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/foto/xxx"/>
+        <!-- etc. -->
+
+    </crm:E22_Man-Made_Object>
+
+
+    <!-- the Photographic Database Heidelberg
+         (this is needed only one single time)
+    -->
+    <crm:E32_Authority_Document rdf:about="http://edh-www.adw.uni-heidelberg.de/edh/foto">
+        <!-- and also an E33_Linguistic_Object, which can have a language -->
+        <rdf:type>
+            <crm:E33_Linguistic_Object/>
+        </rdf:type>
+        <rdf:label>Photographic Database Heidelberg</rdf:label>
+        <crm:P72_has_language>
+            <crm:E56_Language>
+                <rdf:value>ger</rdf:value>
+            </crm:E56_Language>
+        </crm:P72_has_language>
+    </crm:E32_Authority_Document>
+
+
+    <!-- the Licence
+         (maybe this is not needed at all?)
+         
+         PML: Europeana always wants licence statements. 
+    -->
+    <crm:E55_Type rdf:about="http://www.europeana.eu/rights/rr-f/">
+        <crm:P127_has_broader_term>
+            <crm:E55_Type>
+                <rdf:value>Europeana Licence URI</rdf:value>
+            </crm:E55_Type>
+        </crm:P127_has_broader_term>
+        <crm:P70i_is_documented_in>
+            <crm:E31_Document rdf:about="http://www.europeana.eu/portal/rights/rr-f.html"/>
+        </crm:P70i_is_documented_in>
+    </crm:E55_Type>
+
+
+    <!-- places -->
+    <!-- (how about using http://gazetteer.dainst.org for places?) 
+    
+    PML: at the beginning of the project we did not even know it existed. no body pointed it to the project.
+    we have given ids via trismegistos who is going to do OA annotation via pelagios and match with Pleiades.
+    as DAI gazetteer is also in pelagios I hope things will match to an extent.
+    -->
+
+    <!-- it is not clear to me whether place/1 and place/3 should be unified or not;
+         this depends on the role of time in the list of places (we are working on this!)
+         and it wouldn't make much sense to unify place/2 and place/4
+         
+         PML: your place/1 is the ancient name, place/3 is the modern name of that place. these might not always 
+         be the very same spot of course. I do not think they should be unified.
+         also your place/2 and place/4 are entirely different things. 
+    -->
+
+    <crm:E53_Place rdf:about="http://edh-www.adw.uni-heidelberg.de/edh/place/1">
+        <crm:P87_is_identified_by>
+            <crm:E44_Place_Appellation>
+                <rdf:value>Calama</rdf:value>
+                <!-- ancientPlaceName seems to refer to the name and not the place itself? -->
+                <crm:P2_has_type>
+                    <crm:E55_Type>
+                        <rdf:value>ancientPlaceName</rdf:value>
+                    </crm:E55_Type>
+                </crm:P2_has_type>
+            </crm:E44_Place_Appellation>
+        </crm:P87_is_identified_by>
+        <crm:P48_has_preferred_identifier>
+            <crm:E42_Identifier rdf:about="http://www.trismegistos.org/place/00000">
+                <crm:P2_has_type>
+                    <crm:E55_Type>
+                        <rdf:value>Trismegistos URI</rdf:value>
+                    </crm:E55_Type>
+                </crm:P2_has_type>
+            </crm:E42_Identifier>
+        </crm:P48_has_preferred_identifier>
+        <crm:P89_falls_within rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/place/2"/>
+    </crm:E53_Place>
+
+    <crm:E53_Place rdf:about="http://edh-www.adw.uni-heidelberg.de/edh/place/3">
+        <crm:P87_is_identified_by>
+            <crm:E44_Place_Appellation>
+                <rdf:value>Guelma</rdf:value>
+                <!-- modernPlaceName seems to refer to the name and not the place itself? 
+                PML: ok
+                -->
+                <crm:P2_has_type>
+                    <crm:E55_Type>
+                        <rdf:value>modernPlaceName</rdf:value>
+                    </crm:E55_Type>
+                </crm:P2_has_type>
+            </crm:E44_Place_Appellation>
+        </crm:P87_is_identified_by>
+        <crm:P89_falls_within rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/place/4"/>
+    </crm:E53_Place>
+
+    <crm:E53_Place rdf:about="http://edh-www.adw.uni-heidelberg.de/edh/place/2">
+        <crm:P87_is_identified_by>
+            <crm:E44_Place_Appellation>
+                <rdf:value>Africa Proconsularis</rdf:value>
+            </crm:E44_Place_Appellation>
+        </crm:P87_is_identified_by>
+        <!-- provinceItalicRegion seems to refer to the place and not its name? 
+        PML: it is the name as above. and at an arbitrary stage of development
+        -->
+        <crm:P2_has_type>
+            <crm:E55_Type>
+                <rdf:value>provinceItalicRegion</rdf:value>
+            </crm:E55_Type>
+        </crm:P2_has_type>
+        <crm:P48_has_preferred_identifier>
+            <crm:E42_Identifier rdf:about="http://www.trismegistos.org/place/00000">
+                <crm:P2_has_type>
+                    <crm:E55_Type>
+                        <rdf:value>Trismegistos URI</rdf:value>
+                    </crm:E55_Type>
+                </crm:P2_has_type>
+            </crm:E42_Identifier>
+        </crm:P48_has_preferred_identifier>
+    </crm:E53_Place>
+
+    <crm:E53_Place rdf:about="http://edh-www.adw.uni-heidelberg.de/edh/place/4">
+        <crm:P87_is_identified_by>
+            <crm:E44_Place_Appellation>
+                <rdf:value>Algerien</rdf:value>
+            </crm:E44_Place_Appellation>
+        </crm:P87_is_identified_by>
+        <!-- modernCountry seems to refer to the place and not its name?? 
+        I think here is the place, yes.
+        -->
+        <crm:P2_has_type>
+            <crm:E55_Type>
+                <rdf:value>modernCountry</rdf:value>
+            </crm:E55_Type>
+        </crm:P2_has_type>
+    </crm:E53_Place>
+
+    <crm:E53_Place rdf:about="http://edh-www.adw.uni-heidelberg.de/edh/place/5">
+        <crm:P87_is_identified_by>
+            <crm:E44_Place_Appellation>
+                <rdf:value>Guelma, Mus. Rom.</rdf:value>
+            </crm:E44_Place_Appellation>
+        </crm:P87_is_identified_by>
+        <crm:P2_has_type>
+            <crm:E55_Type>
+                <rdf:value>Museum</rdf:value>
+            </crm:E55_Type>
+        </crm:P2_has_type>
+        <crm:P89_falls_within rdf:resource="http://edh-www.adw.uni-heidelberg.de/edh/place/3"/>
+    </crm:E53_Place>
+
+
+    <!-- museums (in the sense of actors, not places) -->
+    <crm:E39_Actor rdf:about="http://edh-www.adw.uni-heidelberg.de/edh/museum/1">
+        <rdf:value>Guelma, Mus. Rom.</rdf:value>
+    </crm:E39_Actor>
+
+
+    <!-- photographers -->
+    <crm:E21_Person rdf:about="http://edh-www.adw.uni-heidelberg.de/hilfe/liste/fotographen/G.A._DF">
+        <!-- however, some Fotographers in the list are not E21_Person, but only E39_Actor -->
+        <crm:P131_is_identified_by>
+            <crm:E82_Actor_Appellation>
+                <rdf:value>Géza Alföldy</rdf:value>
+            </crm:E82_Actor_Appellation>
+        </crm:P131_is_identified_by>
+        <crm:P71i_is_listed_in
+            rdf:resource="http://edh-www.adw.uni-heidelberg.de/hilfe/liste/fotographen"/>
+    </crm:E21_Person>
+
+</rdf:RDF>
